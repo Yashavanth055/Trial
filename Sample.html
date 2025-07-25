@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vuplex Scene Trigger</title>
+  <script>
+    function loadUnityScene(sceneName) {
+      // Vuplex supports postMessage
+      window.vuplex.postMessage(JSON.stringify({
+        type: 'loadScene',
+        scene: sceneName
+      }));
+    }
+  </script>
+</head>
+<body>
+  <h1>Trigger Scene from WebView</h1>
+  <button onclick="loadUnityScene('Trial')">Trial Scene 2</button>
+</body>
+</html>
